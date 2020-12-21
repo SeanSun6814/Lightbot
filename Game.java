@@ -9,6 +9,7 @@ import processing.event.*;
 import processing.opengl.*;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.lang.*;
 
 public class Game {
 
@@ -35,14 +36,14 @@ public class Game {
     }
 
     public void loop() {
-        if (started)
-            update();
+        // if (started)
+        // update();
         draw();
     }
 
-    public void update() {
-        robot.loop();
-    }
+    // public void update() {
+    // robot.loop();
+    // }
 
     private void drawLog() {
         if (g.millis() - logMillis < 1500) {
@@ -80,7 +81,16 @@ public class Game {
 
     public void start() {
         Game.log("Starting robot!");
-        robot.init();
+        robotThread = new Thread() {
+            public void run() {
+                robot.init();
+
+                while (started) {
+                    robot.loop();
+                }
+            }
+        };
+        robotThread.start();
         started = true;
     }
 

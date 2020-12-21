@@ -2,6 +2,7 @@ import processing.core.*;
 import processing.data.*;
 import processing.event.*;
 import processing.opengl.*;
+import java.lang.*;
 
 public class Drive {
 
@@ -19,7 +20,7 @@ public class Drive {
         } else { // if (Game.game.player.playerDir == Direction.RIGHT) {
             Game.game.player.playerDir = Direction.UP;
         }
-        Game.pause();
+        new Delay();
     }
 
     public void rotateRight() {
@@ -32,7 +33,7 @@ public class Drive {
         } else { // if (Game.game.player.playerDir == Direction.RIGHT) {
             Game.game.player.playerDir = Direction.DOWN;
         }
-        Game.pause();
+        new Delay();
     }
 
     public void moveForward() {
@@ -58,7 +59,7 @@ public class Drive {
         } else {
             Game.log("ERROR! You can only go on a 'Space' block!");
         }
-        Game.pause();
+        new Delay();
     }
 
 }
