@@ -35,16 +35,6 @@ public class Game {
         this.g = g;
     }
 
-    public void loop() {
-        // if (started)
-        // update();
-        draw();
-    }
-
-    // public void update() {
-    // robot.loop();
-    // }
-
     private void drawLog() {
         if (g.millis() - logMillis < 1500) {
             g.textSize(32);

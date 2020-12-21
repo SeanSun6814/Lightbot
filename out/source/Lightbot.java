@@ -14,7 +14,6 @@ import java.io.IOException;
 
 public class Lightbot extends PApplet {
 
-
 public void setup(){
 }
 
@@ -24,11 +23,10 @@ public void settings() {
 }
 
 public void draw() {
-    game.loop();
+    game.draw();
 }
 
 public void keyPressed() {
-    println("pressed " + keyCode);
     game.start();
 }
 
