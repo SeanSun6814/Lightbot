@@ -5,7 +5,7 @@ import processing.opengl.*;
 
 // a base for all objects on map
 public abstract class Entity {
-    public int x, y;
+    public volatile int x, y;
     public PApplet g;
 
     public Entity(PApplet g, int x, int y) {

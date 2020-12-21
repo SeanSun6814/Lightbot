@@ -4,7 +4,7 @@ import processing.event.*;
 import processing.opengl.*;
 
 public class Player extends Entity {
-    public Direction playerDir;
+    public volatile Direction playerDir;
 
     public Player(PApplet g, int x, int y, Direction playerDir) {
         super(g, x, y);

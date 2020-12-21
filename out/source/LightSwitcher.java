@@ -20,6 +20,6 @@ public class LightSwitcher {
         } else {
             Game.log("ERROR! The thing you are trying to switch is not a light!");
         }
-
+        new Delay();
     }
 }

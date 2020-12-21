@@ -20,6 +20,7 @@ public class Robot extends RobotBase {
         if (groundSensor.getLeft().equals("Light")) {
             drive.rotateLeft();
             lightSwitcher.switchLight();
+            drive.rotateLeft();
         }
     }
 }
