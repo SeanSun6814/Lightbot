@@ -13,16 +13,16 @@ import java.lang.*;
 
 public class Game {
 
-    public static Game game; // a global static reference to the current game for everyone to use
-    public Entity[][] map; // map of the entire game
-    public int width; // size of each block
-    public int xOffset, yOffset; // top/left margin for game (in pixels)
-    public PApplet g; // reference to canvas for drawing things to the screen
-    public boolean started = false;
-    public Player player;
-    public RobotBase robot;
-    public String log = "";
-    public int logMillis;
+    public static volatile Game game; // a global static reference to the current game for everyone to use
+    public volatile Entity[][] map; // map of the entire game
+    public volatile int width; // size of each block
+    public volatile int xOffset, yOffset; // top/left margin for game (in pixels)
+    public volatile PApplet g; // reference to canvas for drawing things to the screen
+    public volatile boolean started = false;
+    public volatile Player player;
+    public volatile RobotBase robot;
+    public volatile String log = "";
+    public volatile int logMillis;
 
     public Game(PApplet g, Entity[][] map, RobotBase robot, int width, int playerX, int playerY, Direction playerDir,
             int xOffset, int yOffset) {
