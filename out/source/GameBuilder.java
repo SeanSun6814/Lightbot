@@ -31,6 +31,11 @@ class GameBuilder {
         return this;
     }
 
+    public GameBuilder addLight(int x, int y, boolean on) {
+        map[y][x] = new Light(g, x, y, on);
+        return this;
+    }
+
     public GameBuilder addPlayer(int x, int y) {
         this.playerX = playerX;
         this.playerY = playerY;

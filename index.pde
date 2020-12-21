@@ -3,7 +3,7 @@ void setup(){
 
 
 public void settings() {
-  size(1500, 1000);
+  size(1300, 1300);
 }
 
 void draw() {
@@ -17,12 +17,23 @@ void keyPressed() {
 
 
 Game game = Game.create(this)
-.setDimensions(10, 10, 50)
+.setDimensions(13, 13, 90)
+.addOffset(50, 50)
 .addPlayer(1, 1)
 .addSpace(1, 1)
 .addSpace(1, 2)
 .addSpace(1, 3)
 .addSpace(1, 4)
 .addSpace(1, 5)
+.addSpace(2, 5)
+.addSpace(3, 5)
+.addSpace(3, 6)
+.addSpace(3, 7)
+.addSpace(3, 8)
+.addSpace(3, 9)
+.addSpace(4, 7)
+.addSpace(5, 7)
+.addSpace(6, 7)
+.addSpace(7, 7)
 .fillTheRestWithNothing()
 .build();

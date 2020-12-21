@@ -10,6 +10,6 @@ public class Nothing extends Entity {
     }
 
     public void draw(int x, int y, int w) {
-
+        g.line(x, y + w, x + w, y);
     }
 }

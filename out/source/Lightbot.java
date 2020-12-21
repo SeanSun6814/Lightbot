@@ -20,7 +20,7 @@ public void setup(){
 
 
 public void settings() {
-  size(1500, 1000);
+  size(1300, 1300);
 }
 
 public void draw() {
@@ -34,35 +34,26 @@ public void keyPressed() {
 
 
 Game game = Game.create(this)
-.setDimensions(10, 10, 50)
+.setDimensions(13, 13, 90)
+.addOffset(50, 50)
 .addPlayer(1, 1)
 .addSpace(1, 1)
 .addSpace(1, 2)
 .addSpace(1, 3)
 .addSpace(1, 4)
 .addSpace(1, 5)
+.addSpace(2, 5)
+.addSpace(3, 5)
+.addSpace(3, 6)
+.addSpace(3, 7)
+.addSpace(3, 8)
+.addSpace(3, 9)
+.addSpace(4, 7)
+.addSpace(5, 7)
+.addSpace(6, 7)
+.addSpace(7, 7)
 .fillTheRestWithNothing()
 .build();
-
-// class Pos {
-// int x, y;
-
-// public Pos() {
-// x = y = 0;
-// }
-
-// public Pos(int x, int y) {
-// this.x = x;
-// this.y = y;
-// }
-
-// public boolean equals(Object obj) {
-// if (obj == null || !(obj instanceof Pos))
-// return false;
-// return (x == obj.x && y == obj.y);
-// }
-
-// }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Lightbot" };
     if (passedArgs != null) {

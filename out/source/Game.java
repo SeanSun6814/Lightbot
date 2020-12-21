@@ -47,7 +47,7 @@ public class Game {
     }
 
     public void start() {
-
+        
     }
 
     public static GameBuilder create(PApplet g) {
