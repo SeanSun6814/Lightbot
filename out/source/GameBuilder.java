@@ -3,12 +3,15 @@ import processing.data.*;
 import processing.event.*;
 import processing.opengl.*;
 
-class GameBuilder {
+public class GameBuilder {
+    // these are all temporary variables for final game construction
     public Entity[][] map;
     public int spacing;
     public int xOffset = 0, yOffset = 0;
     public int playerX, playerY;
+    public Direction playerDir;
     public PApplet g;
+    public RobotBase robot;
 
     public GameBuilder(PApplet g) {
         this.g = g;
@@ -36,9 +39,15 @@ class GameBuilder {
         return this;
     }
 
-    public GameBuilder addPlayer(int x, int y) {
-        this.playerX = playerX;
-        this.playerY = playerY;
+    public GameBuilder addPlayer(int x, int y, Direction playerDir) {
+        this.playerX = x;
+        this.playerY = y;
+        this.playerDir = playerDir;
+        return this;
+    }
+
+    public GameBuilder addRobotCode(RobotBase robot) {
+        this.robot = robot;
         return this;
     }
 
@@ -53,7 +62,8 @@ class GameBuilder {
     }
 
     public Game build() {
-        return new Game(g, map, spacing, playerX, playerY, xOffset, yOffset);
+        Game.game = new Game(g, map, robot, spacing, playerX, playerY, playerDir, xOffset, yOffset);
+        return Game.game;
     }
 
 }

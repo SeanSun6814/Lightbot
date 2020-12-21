@@ -3,6 +3,7 @@ import processing.data.*;
 import processing.event.*;
 import processing.opengl.*;
 
+// a base for all objects on map
 public abstract class Entity {
     public int x, y;
     public PApplet g;

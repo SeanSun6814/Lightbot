@@ -7,7 +7,7 @@ public void settings() {
 }
 
 void draw() {
-    game.draw();
+    game.loop();
 }
 
 void keyPressed() {
@@ -19,7 +19,9 @@ void keyPressed() {
 Game game = Game.create(this)
 .setDimensions(13, 13, 90)
 .addOffset(50, 50)
-.addPlayer(1, 1)
+.addPlayer(1, 1, Direction.DOWN)
+.addRobotCode(new Robot())
+.addLight(6, 6, false)
 .addSpace(1, 1)
 .addSpace(1, 2)
 .addSpace(1, 3)
