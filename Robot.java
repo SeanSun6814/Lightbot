@@ -5,11 +5,9 @@ public class Robot extends RobotBase {
     public LightSwitcher lightSwitcher = new LightSwitcher();
 
     public void init() {
-        System.out.println("INIT IS CALLED!");
     }
 
     public void loop() {
-        // System.out.println("LOOP IS CALLED!");
         drive.moveForward();
         if (groundSensor.getFront().equals("Nothing") && groundSensor.getRight().equals("Space")) {
             drive.rotateRight();
